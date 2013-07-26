@@ -12,4 +12,8 @@ build:
           name: Install Drupal
           code: |-
               drush site-install standard --db-url=WERCKER_MYSQL_URL --site-name=Testing
+    -  script:
+          name: Run Tests
+          code: |-
+              drush test-run
 
