@@ -8,7 +8,8 @@ build:
           code: |-
               pear channel-discover pear.drush.org
               pear install drush/drush
-              drush version
+              ls /usr/share/php/
+              /usr/share/php/pear/drush version
     -  script:
           name: Install Drupal
           code: |-
