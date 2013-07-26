@@ -4,7 +4,12 @@ services:
 build:
     steps:
     -  script:
-        name: Install Drush
-        code: |-
-            pear channel-discover pear.drush.org
-            pear install drush/drush
+          name: Install Drush
+          code: |-
+              pear channel-discover pear.drush.org
+              pear install drush/drush
+    -  script:
+          name: Install Drupal
+          code: |-
+              drush site-install standard --db-url=WERCKER_MYSQL_URL --site-name=Testing
+
