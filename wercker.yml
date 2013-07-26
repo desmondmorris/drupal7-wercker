@@ -26,6 +26,6 @@ build:
     -  script:
           name: Run tests
           code: |-
-              drush test-run --all --xml --uri=http://127.0.0.1:8080
+              drush test-run DrupalGotoTest --xml --uri=http://127.0.0.1:8080
 
 
