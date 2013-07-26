@@ -1,8 +1,5 @@
 box: wercker/php
 build:
     steps:
-      - script:
-        name: install drush
-        code: |-
-          pear channel-discover pear.drush.org
-          pear install drush/drush
+      - pear channel-discover pear.drush.org
+      - pear install drush/drush
