@@ -1,8 +1,10 @@
 box: wercker/php
+services:
+    - wercker/mysql
 build:
     steps:
     -  script:
-        name: some simple test!
+        name: Install Drush
         code: |-
             pear channel-discover pear.drush.org
             pear install drush/drush
