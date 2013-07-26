@@ -15,7 +15,8 @@ build:
           code: |-
               drush site-install standard --db-url=WERCKER_MYSQL_URL --site-name=Testing -y
     -  script:
-          name: Run Tests
+          name:  Enable simpletest
           code: |-
-              drush test-run
+              drush en simpletest -y
+
 
