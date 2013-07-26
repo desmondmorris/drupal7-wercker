@@ -13,7 +13,7 @@ build:
     -  script:
           name: Install Drupal
           code: |-
-              drush site-install standard --db-url=WERCKER_MYSQL_URL --site-name=Testing
+              drush site-install standard --db-url=WERCKER_MYSQL_URL --site-name=Testing -y
     -  script:
           name: Run Tests
           code: |-
