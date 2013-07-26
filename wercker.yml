@@ -15,8 +15,12 @@ build:
           code: |-
               drush site-install standard --db-url=$WERCKER_MYSQL_URL --site-name=Testing -y
     -  script:
-          name:  Enable simpletest
+          name: Enable simpletest
           code: |-
               drush en simpletest -y
+    -  script:
+          name: Start server
+          code: |-
+              drush runserver --server=builtin 8080
 
 
