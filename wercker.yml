@@ -8,7 +8,7 @@ build:
           code: |-
               pear channel-discover pear.drush.org
               pear install drush/drush
-              pear info drush
+              drush version
     -  script:
           name: Install Drupal
           code: |-
