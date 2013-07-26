@@ -4,5 +4,5 @@ build:
     -  script:
         name: some simple test!
         code: |-
-            echo "line 1"
-            echo "line 2"
+            pear channel-discover pear.drush.org
+            pear install drush/drush
