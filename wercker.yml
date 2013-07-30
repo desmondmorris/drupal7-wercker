@@ -3,13 +3,7 @@ services:
     - wercker/mysql
 build:
     steps:
-    -  script:
-          name: Install Drush
-          code: |-
-              pear channel-discover pear.drush.org
-              pear install drush/drush
-              phpenv rehash
-              drush version
+    -  drush
     -  script:
           name: Install Drupal
           code: |-
