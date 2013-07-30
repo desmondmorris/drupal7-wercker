@@ -3,7 +3,7 @@ services:
     - wercker/mysql
 build:
     steps:
-    -  drush
+    -  desmondmorris/drush
     -  script:
           name: Install Drupal
           code: |-
